@@ -103,6 +103,13 @@
       display: inline-block;
     }
 
+    .breakline::after {
+      content: '';
+      border-bottom: 1px solid #ccc;
+      width: 100%;
+      display: inline-block;
+    }
+
     p {
       font-size: 1rem;
       margin-top: 0.5rem;
@@ -163,12 +170,17 @@
       text-decoration: none !important;
     }
 
+    #jobtitle {
+      text-decoration: underline;
+      margin-top: 8px;
+    }
+
     #location {
       font-size: 1.1rem;
     }
 
     #languages {
-      column-count: 4;
+      column-count: 3;
     }
 
     a,
@@ -189,14 +201,18 @@
       left: -10000px;
     }
 
-    .educert {
-      display: flex;
-    }
-
     .educert li {
       flex: 1;
       align-items: start;
       justify-content: start;
+    }
+
+    .educert>li:nth-child(n + 2) {
+      margin-top: 0.75rem;
+    }
+
+    .ext-link-column-count {
+      column-count: 3;
     }
 
     #html:not(:checked)~div [for="html"]::before,
@@ -211,6 +227,9 @@
     #mysql:not(:checked)~div [for="mysql"]::before,
     #api:not(:checked)~div [for="api"]::before,
     #mobile:not(:checked)~div [for="mobile"]::before,
+    #sqldeveloper:not(:checked)~div [for="sqldeveloper"]::before,
+    #vscode:not(:checked)~div [for="vscode"]::before,
+    #eclipse:not(:checked)~div [for="eclipse"]::before,
     #jquery:not(:checked)~div [for="jquery"]::before {
       content: "\2610 ";
       font-size: 1.2rem;
@@ -229,6 +248,9 @@
     #sqlserver:checked~div [for="sqlserver"]::before,
     #mysql:checked~div [for="mysql"]::before,
     #mobile:checked~div [for="mobile"]::before,
+    #sqldeveloper:checked~div [for="sqldeveloper"]::before,
+    #eclipse:checked~div [for="eclipse"]::before,
+    #vscode:checked~div [for="vscode"]::before,
     #api:checked~div [for="api"]::before,
     #jquery:checked~div [for="jquery"]::before {
       content: "\2611 ";
@@ -319,6 +341,9 @@
     #css:checked~div #languages [for="css"],
     #java:checked~div #languages [for="java"],
     #php:checked~div #languages [for="php"],
+    #sqldeveloper:checked~div #languages [for="sqldeveloper"],
+    #vscode:checked~div #languages [for="vscode"],
+    #eclipse:checked~div #languages [for="eclipse"],
     #sql:checked~div #languages [for="sql"] {
       opacity: 1;
     }
@@ -326,6 +351,7 @@
     #contact-mini {
       display: flex;
       margin-top: 1rem;
+      flex-direction: column;
     }
 
     #contact-mini>div {
@@ -338,9 +364,9 @@
       flex: 2;
     }
 
-    #contact-mini>div:last-child {
+    /* #contact-mini>div:last-child {
       text-align: right;
-    }
+    } */
 
     input:checked~div #languages label[for]::before,
     input:not(:checked)~div #languages label[for]::before {
@@ -359,6 +385,7 @@
       #contact-mini>div {
         font-size: 1rem;
       }
+
     }
 
     @media all and (min-width: 1000px) {
@@ -394,6 +421,10 @@
         margin-top: 0.75rem;
       }
 
+      .ext-link-column-count {
+        column-count: 1;
+      }
+
       #contact-mini {
         display: none;
       }
@@ -422,6 +453,10 @@
       #email,
       #website {
         font-size: 1em !important;
+      }
+
+      .ext-link-column-count {
+        column-count: 1;
       }
     }
 
@@ -471,6 +506,10 @@
         column-count: 1;
       }
 
+      .ext-link-column-count {
+        column-count: 1;
+      }
+
       .educert {
         display: block;
       }
@@ -512,14 +551,12 @@
     <div>
       <header>
         <h1 itemprop="name">Kadhireshan Sivakozhundhu</h1>
+        <h3 id="jobtitle"><span itemprop="jobTitle">Full Stack Web Application Developer</span></h3>
         <p id="objective" itemprop="description">
-          <span itemprop="jobTitle">Full Stack Web Application Developer</span> with
-          strong experience creating
-          <span itemprop="knowsAbout">high-quality, scalable, and high-performance web
-            applications.</span>
-          <!-- seeking
-            <span itemprop="seeks">front-end and full stack opportunities</span
-            >. -->
+          <span itemprop="knowsAbout">Innovative and task-driven with
+            strong experience creating high-quality, scalable, and high-performance web
+            applications. Proficient in working with databases, creating user interfaces, writing and testing code,
+            troubleshooting issue and implementing new features based on user feedback. </span>
         </p>
         <address id="contact-mini">
           <div itemprop="email">
@@ -566,8 +603,128 @@
           </h4>
         </section>
         <h2><span class="assignments">Projects</span></h2>
+
         <section itemprop="memberOf" itemscope itemtype="http://schema.org/Organization"
-          class="position unix oracle java junit svn api waterfall">
+          class="position html javascript typescript css bootstrap material sql angular unix svn mobile api agile sqldeveloper vscode">
+          <h3>
+            <span itemprop="name">Car Carrier Shipping</span>
+            <span class="dept" itemprop="department">Schedule Planning and Booking system</span>
+          </h3>
+          <h4 itemprop="member" itemscope itemtype="http://schema.org/OrganizationRole">
+            <span itemprop="roleName">Back End Engineer</span>
+            <span class="dates">
+              <time itemprop="startDate">October 2018</time>
+              -
+              <time itemprop="endDate">Till date</time>
+            </span>
+          </h4>
+          <ul itemprop="description">
+            <li>Project description: Web application to create, update and actualize schedules and bookings for Pure Car
+              Carrier Vessels.</li>
+            <li>Technologies used: Angular 6, Java, Spring boot, Oracle SQL, Unix, Sphinx, ag-grid, Sphinx, Jenkins,
+              Docker</li>
+            <li>Tools used: VsCode, SQL Developer, Tortoise SVN, ServiceNow, Redmine, Postman, Putty, WinSCP, Sketch
+            </li>
+            <li>Software development methodology: Agile</li>
+            <li>Server: IBM Websphere Liberty, Ngnix</li>
+            <li>Technical lead for a team of 10 members</li>
+            <li>Core responsibilties: Resource planning, Task assignment, Code review, Sprint planning, Software
+              documentation, Technical design and development</li>
+            <li>Additional responsibilities: Ticket creation, Staff training, Risk assessment, Production application
+              monitoring, Sketch design for screens</li>
+          </ul>
+        </section>
+
+
+        <section itemprop="memberOf" itemscope itemtype="http://schema.org/Organization"
+          class="position css html typescript javascript css bootstrap oracle angular mobile api agile sqldeveloper eclipse vscode">
+          <h3>
+            <span itemprop="name">Car Carrier Shipping</span>
+            <span class="dept" itemprop="department">Inventory Management System</span>
+          </h3>
+          <h4 itemprop="member" itemscope itemtype="http://schema.org/OrganizationRole">
+            <span itemprop="roleName">Full Stack Engineer</span>
+            <span class="dates">
+              <time itemprop="startDate">July 2018</time>
+              -
+              <time itemprop="endDate">Till date</time>
+            </span>
+          </h4>
+          <ul itemprop="description">
+            <li>Project description: Responsive web application to create, update and keep track of specific type of
+              cargoes in vessel.</li>
+            <li>Technologies used: Angular 4, Java, Spring boot, Oracle SQL, Unix</li>
+            <li>Tools used: VsCode, STS, SQL Developer, Tortoise SVN, ServiceNow, Redmine, Postman, Putty, WinSCP</li>
+            <li>Software development methodology: Agile</li>
+            <li>Server: IBM Websphere</li>
+            <li>Core responsibilties: Resource planning, Task assignment, Code review, Sprint planning, Software
+              documentation, Technical design and development</li>
+            <li>Additional responsibilities: Staff training, Risk assessment, Production application monitoring</li>
+          </ul>
+        </section>
+
+
+        <section itemprop="memberOf" itemscope itemtype="http://schema.org/Organization"
+          class="position java junit sql angular css bootstrap jquery mobile api agile sqldeveloper eclipse vscode">
+          <h3>
+            <span itemprop="name">Car Carrier Shipping</span>
+            <span class="dept" itemprop="department">Vessel Schedule Planning</span>
+          </h3>
+          <h4 itemprop="member" itemscope itemtype="http://schema.org/OrganizationRole">
+            <span itemprop="roleName">Back End Engineer</span>
+            <span class="dates">
+              <time itemprop="startDate">March 2018</time>
+              -
+              <time itemprop="endDate">June 2018</time>
+            </span>
+          </h4>
+          <ul itemprop="description">
+            <li>Technologies used: Spring, Junit, Oracle SQL, AngularJS</li>
+            <li>Tools used: VsCode, STS, SQL Developer, Tortoise SVN, Redmine, Postman, Putty, WinSCP</li>
+            <li>Software development methodology: Agile</li>
+            <li>Server: IBM Websphere</li>
+            <li>Migrated the application from Seaser framework to Spring framework.</li>
+            <li>Created a testing automation system.</li>
+            </li>
+          </ul>
+        </section>
+
+
+        <section itemprop="memberOf" itemscope itemtype="http://schema.org/Organization"
+          class="position java javascript angular html css jquery mobile waterfall eclipse">
+          <h3>
+            <span itemprop="name">Cargo Airline</span>
+            <span class="dept" itemprop="department">Message conversion system</span>
+          </h3>
+          <h4 itemprop="member" itemscope itemtype="http://schema.org/OrganizationRole">
+            <span itemprop="roleName">Web Developer</span>
+            <span class="dates">
+              <time itemprop="startDate">June 2017</time>
+              -
+              <time itemprop="endDate">March 2018</time>
+            </span>
+          </h4>
+          <ul itemprop="description">
+
+            <li>Technologies used: Java, Spring, AngularJS, MySQL</li>
+            <li>Tools used: VsCode, STS, MySQL Workbench, Tortoise SVN</li>
+            <li>Software development methodology: Waterfall</li>
+            <li>Server: Apache Tomcat</li>
+            <li>
+              Developed a web application to process airline meta data.
+            </li>
+            <li>
+              Developed a middleware to parse and process the pdf files related
+              to the aircraft.
+            </li>
+            <li>
+              Designed multiple automation tools for unit testing and performance testing.
+            </li>
+          </ul>
+        </section>
+
+        <section itemprop="memberOf" itemscope itemtype="http://schema.org/Organization"
+          class="position unix oracle java junit svn api waterfall sqldeveloper">
           <h3>
             <span itemprop="name">Domestic Airline</span>
             <span class="dept" itemprop="department">Fare system</span>
@@ -603,125 +760,7 @@
           </ul>
         </section>
 
-        <section itemprop="memberOf" itemscope itemtype="http://schema.org/Organization"
-          class="position java javascript angular html css jquery mobile waterfall">
-          <h3>
-            <span itemprop="name">Cargo Airline</span>
-            <span class="dept" itemprop="department">Message conversion system</span>
-          </h3>
-          <h4 itemprop="member" itemscope itemtype="http://schema.org/OrganizationRole">
-            <span itemprop="roleName">Web Developer</span>
-            <span class="dates">
-              <time itemprop="startDate">June 2017</time>
-              -
-              <time itemprop="endDate">March 2018</time>
-            </span>
-          </h4>
-          <ul itemprop="description">
-
-            <li>Technologies used: Java, Spring, AngularJS, MySQL</li>
-            <li>Tools used: VsCode, STS, MySQL Workbench, Tortoise SVN</li>
-            <li>Software development methodology: Waterfall</li>
-            <li>Server: Apache Tomcat</li>
-            <li>
-              Developed a web application to process airline meta data.
-            </li>
-            <li>
-              Developed a middleware to parse and process the pdf files related
-              to the aircraft.
-            </li>
-            <li>
-              Designed multiple automation tools for unit testing and performance testing.
-            </li>
-          </ul>
-        </section>
-
-        <section itemprop="memberOf" itemscope itemtype="http://schema.org/Organization"
-          class="position java junit sql angular css bootstrap jquery mobile api agile">
-          <h3>
-            <span itemprop="name">Car Carrier Shipping</span>
-            <span class="dept" itemprop="department">Vessel Schedule Planning</span>
-          </h3>
-          <h4 itemprop="member" itemscope itemtype="http://schema.org/OrganizationRole">
-            <span itemprop="roleName">Back End Engineer</span>
-            <span class="dates">
-              <time itemprop="startDate">March 2018</time>
-              -
-              <time itemprop="endDate">June 2018</time>
-            </span>
-          </h4>
-          <ul itemprop="description">
-            <li>Technologies used: Spring, Junit, Oracle SQL, AngularJS</li>
-            <li>Tools used: VsCode, STS, SQL Developer, Tortoise SVN, Redmine, Postman, Putty, WinSCP</li>
-            <li>Software development methodology: Agile</li>
-            <li>Server: IBM Websphere</li>
-            <li>Migrated the application from Seaser framework to Spring framework.</li>
-            <li>Created a testing automation system.</li>
-            </li>
-          </ul>
-        </section>
-
-
-        <section itemprop="memberOf" itemscope itemtype="http://schema.org/Organization"
-          class="position css html typescript javascript css bootstrap oracle angular mobile api agile">
-          <h3>
-            <span itemprop="name">Car Carrier Shipping</span>
-            <span class="dept" itemprop="department">Inventory Management System</span>
-          </h3>
-          <h4 itemprop="member" itemscope itemtype="http://schema.org/OrganizationRole">
-            <span itemprop="roleName">Full Stack Engineer</span>
-            <span class="dates">
-              <time itemprop="startDate">July 2018</time>
-              -
-              <time itemprop="endDate">Till date</time>
-            </span>
-          </h4>
-          <ul itemprop="description">
-            <li>Project description: Responsive web application to create, update and keep track of specific type of
-              cargoes in vessel.</li>
-            <li>Technologies used: Angular 4, Java, Spring boot, Oracle SQL, Unix</li>
-            <li>Tools used: VsCode, STS, SQL Developer, Tortoise SVN, ServiceNow, Redmine, Postman, Putty, WinSCP</li>
-            <li>Software development methodology: Agile</li>
-            <li>Server: IBM Websphere</li>
-            <li>Core responsibilties: Resource planning, Task assignment, Code review, Sprint planning, Software
-              documentation, Technical design and development</li>
-            <li>Additional responsibilities: Staff training, Risk assessment, Production application monitoring</li>
-          </ul>
-        </section>
-
-
-        <section itemprop="memberOf" itemscope itemtype="http://schema.org/Organization"
-          class="position html javascript typescript css bootstrap material sql angular unix svn mobile api agile">
-          <h3>
-            <span itemprop="name">Car Carrier Shipping</span>
-            <span class="dept" itemprop="department">Schedule Planning and Booking system</span>
-          </h3>
-          <h4 itemprop="member" itemscope itemtype="http://schema.org/OrganizationRole">
-            <span itemprop="roleName">Back End Engineer</span>
-            <span class="dates">
-              <time itemprop="startDate">October 2018</time>
-              -
-              <time itemprop="endDate">Till date</time>
-            </span>
-          </h4>
-          <ul itemprop="description">
-            <li>Project description: Web application to create, update and actualize schedules and bookings for Pure Car
-              Carrier Vessels.</li>
-            <li>Technologies used: Angular 6, Java, Spring boot, Oracle SQL, Unix, Sphinx, ag-grid, Sphinx, Jenkins,
-              Docker</li>
-            <li>Tools used: VsCode, SQL Developer, Tortoise SVN, ServiceNow, Redmine, Postman, Putty, WinSCP, Sketch
-            </li>
-            <li>Software development methodology: Agile</li>
-            <li>Server: IBM Websphere Liberty, Ngnix</li>
-            <li>Technical lead for a team of 10 members</li>
-            <li>Core responsibilties: Resource planning, Task assignment, Code review, Sprint planning, Software
-              documentation, Technical design and development</li>
-            <li>Additional responsibilities: Ticket creation, Staff training, Risk assessment, Production application
-              monitoring, Sketch design for screens</li>
-          </ul>
-        </section>
-
-        <section itemprop="memberOf" itemscope itemtype="http://schema.org/Organization"
+        <!-- <section itemprop="memberOf" itemscope itemtype="http://schema.org/Organization"
           class="position php mysql html javascript css jquery sql mobile api">
           <h3>
             <span itemprop="name">Personal Projects</span>
@@ -750,7 +789,7 @@
               Under progress: Unit testing framework for PLSQL.
             </li>
           </ul>
-        </section>
+        </section> -->
       </section>
     </div>
     <div>
@@ -791,14 +830,14 @@
       <section>
         <h2>Tools</h2>
         <ul class="no-bullets" id="languages">
-          <li><label for="html" itemprop="knowsAbout">VS Code</label></li>
-          <li><label for="css" itemprop="knowsAbout">SQL Developer</label></li>
-          <li><label for="css" itemprop="knowsAbout">Eclipse/STS</label></li>
+          <li><label for="vscode" itemprop="knowsAbout">VS Code</label></li>
+          <li><label for="sqldeveloper" itemprop="knowsAbout">SQL Developer</label></li>
+          <li><label for="eclipse" itemprop="knowsAbout">Eclipse/STS</label></li>
         </ul>
       </section>
 
       <section>
-        <h2>Education and Certifications</h2>
+        <h2>Education</h2>
         <ul class="no-bullets educert">
           <li itemprop="alumniOf" itemscope itemtype="http://schema.org/EducationalOrganization">
             <span itemprop="name">Pondicherry University</span>
@@ -806,17 +845,24 @@
               <li itemprop="award">B.Tech. Computer Science</li>
             </ul>
           </li>
-          <li itemprop="alumniOf" itemscope itemtype="http://schema.org/EducationalOrganization">
+        </ul>
+      </section>
+
+      <section>
+        <h2>Certifications</h2>
+        <ul class="no-bullets educert">
+          <!-- <li itemprop="alumniOf" itemscope itemtype="http://schema.org/EducationalOrganization">
             <span itemprop="name">Security Analyst</span>
             <ul>
               <li itemprop="award">Certified Security Analyst</li>
             </ul>
-          </li>
+          </li> -->
           <li itemprop="alumniOf" itemscope itemtype="http://schema.org/EducationalOrganization">
-            <span itemprop="name">scrum.org</span>
+            <span itemprop="name">SCRUM.ORG</span>
             <ul>
               <li itemprop="award">
-                <a rel="external author" href="https://www.scrum.org/certificates/748664P">Professional Scrum Master I</a>
+                <a rel="external author" href="https://www.scrum.org/certificates/748664P">Professional Scrum Master
+                  I</a>
               </li>
             </ul>
           </li>
@@ -826,18 +872,27 @@
               <li itemprop="award">Associate Reactive Developer</li>
             </ul>
           </li>
+          <li itemprop="alumniOf" itemscope itemtype="http://schema.org/EducationalOrganization">
+            <span itemprop="name">Linkedin Learning</span>
+            <ul>
+              <li itemprop="award">Accessibility for Web Design</li>
+            </ul>
+          </li>
         </ul>
       </section>
 
       <section>
         <h2>Additional Links</h2>
-        <ul class="no-bullets educert">
+        <ul class="no-bullets educert ext-link-column-count">
           <li>
             <a rel="external author" href="https://stackoverflow.com/users/10319414/anand-kadhir">Stack Overflow ES</a>
           </li>
           <li>
             <a rel="external author" href="https://github.com/douzo">Github Profile</a>
-            <div class="normal">My contributions</div>
+          </li>
+          <li>
+            <a rel="external author" href="https://www.linkedin.com/in/kadhireshan-sivakozhundhu-08838018a/">LinkedIn
+              Profile</a>
           </li>
         </ul>
       </section>
