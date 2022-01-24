@@ -377,6 +377,10 @@
       display: none;
     }
 
+    #client-name {
+      display: none;
+    }
+
     @media all and (min-width: 630px) {
       main {
         max-width: 600px;
@@ -405,7 +409,7 @@
       }
 
       main>div:last-child {
-        width: 21%;
+        width: 22%;
         margin-left: 4%;
       }
 
@@ -462,19 +466,20 @@
 
     @media print {
       @page {
-        size: 900px;
+        size: A4;
+        /* this affects the margin in the printer settings */
+        margin: 5mm 5mm 0mm 5mm;
       }
 
       html,
       body {
         background: #fff;
         font-size: 16px;
-        width: 900px;
+        width: 1000px;
       }
 
       a,
       a:visited,
-      a:link,
       a:active,
       a:focus,
       #languages label {
@@ -484,7 +489,7 @@
 
       main {
         margin: 0;
-        max-width: 920px;
+        max-width: 1000px;
         display: flex;
         box-shadow: none;
       }
@@ -494,12 +499,23 @@
       }
 
       main>div:last-child {
-        width: 21%;
+        width: 22%;
         margin-left: 4%;
       }
 
-      #filters {
+      #filters,
+      #tools-used,
+      #sdlc-used,
+      #server-used,
+      #add-resp,
+      #industry-name,
+      #additional-links {
         display: none;
+      }
+
+
+      #client-name {
+        display: contents;
       }
 
       #languages {
@@ -607,7 +623,8 @@
         <section itemprop="memberOf" itemscope itemtype="http://schema.org/Organization"
           class="position html javascript typescript css bootstrap material sql angular unix svn mobile api agile sqldeveloper vscode">
           <h3>
-            <span itemprop="name">Car Carrier Shipping</span>
+            <span itemprop="name" id='industry-name'>Car Carrier Shipping</span>
+            <span itemprop="name" id='client-name'>NYK Line</span>
             <span class="dept" itemprop="department">Schedule Planning and Booking system</span>
           </h3>
           <h4 itemprop="member" itemscope itemtype="http://schema.org/OrganizationRole">
@@ -619,18 +636,22 @@
             </span>
           </h4>
           <ul itemprop="description">
-            <li>Project description: Web application to create, update and actualize schedules and bookings for Pure Car
+            <li id='proj-desc'>Project description: Create a web application for the sales agents around the world to
+              create, update and actualize schedules and
+              bookings for Pure Car
               Carrier Vessels.</li>
-            <li>Technologies used: Angular 6, Java, Spring boot, Oracle SQL, Unix, Sphinx, ag-grid, Sphinx, Jenkins,
+            <li id='tech-used'>Technologies used: Angular, Java, Spring boot, Oracle SQL, Unix, ag-grid, Jenkins,
               Docker</li>
-            <li>Tools used: VsCode, SQL Developer, Tortoise SVN, ServiceNow, Redmine, Postman, Putty, WinSCP, Sketch
+            <li id='tools-used'>Tools used: VsCode, SQL Developer, Tortoise SVN, ServiceNow, Redmine, Postman, Putty,
+              WinSCP, Sketch
             </li>
-            <li>Software development methodology: Agile</li>
-            <li>Server: IBM Websphere Liberty, Ngnix</li>
-            <li>Technical lead for a team of 10 members</li>
-            <li>Core responsibilties: Resource planning, Task assignment, Code review, Sprint planning, Software
+            <li id='sdlc-used'>Software development methodology: Agile</li>
+            <li id='server-used'>Server: IBM Websphere Liberty, Ngnix</li>
+            <li id='core-resp'>Core responsibilties: Resource planning, Task assignment, Code review, Sprint planning,
+              Software
               documentation, Technical design and development</li>
-            <li>Additional responsibilities: Ticket creation, Staff training, Risk assessment, Production application
+            <li id='add-resp'>Additional responsibilities: Ticket creation, Staff training, Risk assessment, Production
+              application
               monitoring, Sketch design for screens</li>
           </ul>
         </section>
@@ -639,7 +660,8 @@
         <section itemprop="memberOf" itemscope itemtype="http://schema.org/Organization"
           class="position css html typescript javascript css bootstrap oracle angular mobile api agile sqldeveloper eclipse vscode">
           <h3>
-            <span itemprop="name">Car Carrier Shipping</span>
+            <span itemprop="name" id='industry-name'>Car Carrier Shipping</span>
+            <span itemprop="name" id='client-name'>NYK Line</span>
             <span class="dept" itemprop="department">Inventory Management System</span>
           </h3>
           <h4 itemprop="member" itemscope itemtype="http://schema.org/OrganizationRole">
@@ -651,15 +673,18 @@
             </span>
           </h4>
           <ul itemprop="description">
-            <li>Project description: Responsive web application to create, update and keep track of specific type of
-              cargoes in vessel.</li>
-            <li>Technologies used: Angular 4, Java, Spring boot, Oracle SQL, Unix</li>
-            <li>Tools used: VsCode, STS, SQL Developer, Tortoise SVN, ServiceNow, Redmine, Postman, Putty, WinSCP</li>
-            <li>Software development methodology: Agile</li>
-            <li>Server: IBM Websphere</li>
-            <li>Core responsibilties: Resource planning, Task assignment, Code review, Sprint planning, Software
-              documentation, Technical design and development</li>
-            <li>Additional responsibilities: Staff training, Risk assessment, Production application monitoring</li>
+            <li id='proj-desc'>Project description: Create a Responsive web application to create, update and keep track
+              of
+              specific type of cargoes in vessel which will be used by port agents arount the world.</li>
+            <li id='tech-used'>Technologies used: Angular 4, Java, Spring boot, Oracle SQL, Unix</li>
+            <li id='tools-used'>Tools used: VsCode, STS, SQL Developer, Tortoise SVN, ServiceNow, Redmine, Postman,
+              Putty, WinSCP</li>
+            <li id='sdlc-used'>Software development methodology: Agile</li>
+            <li id='server-used'>Server: IBM Websphere</li>
+            <li id='core-resp'>Core responsibilties: Resource planning, Task assignment, Code review, Sprint planning,
+              Software documentation, Technical design and development</li>
+            <li id='add-resp'>Additional responsibilities: Staff training, Risk assessment, Production application
+              monitoring</li>
           </ul>
         </section>
 
@@ -667,7 +692,8 @@
         <section itemprop="memberOf" itemscope itemtype="http://schema.org/Organization"
           class="position java junit sql angular css bootstrap jquery mobile api agile sqldeveloper eclipse vscode">
           <h3>
-            <span itemprop="name">Car Carrier Shipping</span>
+            <span itemprop="name" id='industry-name'>Car Carrier Shipping</span>
+            <span itemprop="name" id='client-name'>NYK Line</span>
             <span class="dept" itemprop="department">Vessel Schedule Planning</span>
           </h3>
           <h4 itemprop="member" itemscope itemtype="http://schema.org/OrganizationRole">
@@ -679,12 +705,15 @@
             </span>
           </h4>
           <ul itemprop="description">
-            <li>Technologies used: Spring, Junit, Oracle SQL, AngularJS</li>
-            <li>Tools used: VsCode, STS, SQL Developer, Tortoise SVN, Redmine, Postman, Putty, WinSCP</li>
-            <li>Software development methodology: Agile</li>
-            <li>Server: IBM Websphere</li>
-            <li>Migrated the application from Seaser framework to Spring framework.</li>
-            <li>Created a testing automation system.</li>
+            <li id='proj-desc'>Project description: Upgrade a legacy Java application from old framework to Spring and
+              use MyBatis as ORM. Create JUnit test cases to push the team towards test driven development (TDD). </li>
+            <li id='tech-used'>Technologies used: Spring, Junit, Oracle SQL, AngularJS</li>
+            <li id='tools-used'>Tools used: VsCode, STS, SQL Developer, Tortoise SVN, Redmine, Postman, Putty, WinSCP
+            </li>
+            <li id='sdlc-used'>Software development methodology: Agile</li>
+            <li id='server-used'>Server: IBM Websphere</li>
+            <li id='core-resp'>Core responsibilties: Technical design and development, Creating a good rapport with the
+              clients</li>
             </li>
           </ul>
         </section>
@@ -693,7 +722,8 @@
         <section itemprop="memberOf" itemscope itemtype="http://schema.org/Organization"
           class="position java javascript angular html css jquery mobile waterfall eclipse">
           <h3>
-            <span itemprop="name">Cargo Airline</span>
+            <span itemprop="name" id='industry-name'>Cargo Airline</span>
+            <span itemprop="name" id='client-name'>Nippon Cargo Airlines</span>
             <span class="dept" itemprop="department">Message conversion system</span>
           </h3>
           <h4 itemprop="member" itemscope itemtype="http://schema.org/OrganizationRole">
@@ -705,29 +735,25 @@
             </span>
           </h4>
           <ul itemprop="description">
-
-            <li>Technologies used: Java, Spring, AngularJS, MySQL</li>
-            <li>Tools used: VsCode, STS, MySQL Workbench, Tortoise SVN</li>
-            <li>Software development methodology: Waterfall</li>
-            <li>Server: Apache Tomcat</li>
-            <li>
-              Developed a web application to process airline meta data.
-            </li>
-            <li>
-              Developed a middleware to parse and process the pdf files related
-              to the aircraft.
-            </li>
-            <li>
-              Designed multiple automation tools for unit testing and performance testing.
-            </li>
+            <li id='proj-desc'>Project description: Create a web application for in-house usage which parses PDF's and
+              manipulate in the required way and send to print servers. Fetch real time weather details from different
+              weather servers and process it. Get data from ACARS (Aircraft Comumunication Addressing and Reporting
+              System) and create reports from it.</li>
+            <li id='tech-used'>Technologies used: Java, Spring, AngularJS, MySQL</li>
+            <li id='tools-used'>Tools used: VsCode, STS, MySQL Workbench, Tortoise SVN</li>
+            <li id='sdlc-used'>Software development methodology: Waterfall</li>
+            <li id='server-used'>Server: Apache Tomcat</li>
+            <li id='core-resp'>Core responsibilties: Technical design and development, creating a UML diagrams, test
+              case creation and execution, performance testing and performance tuning, creating design documents</li>
           </ul>
         </section>
 
         <section itemprop="memberOf" itemscope itemtype="http://schema.org/Organization"
           class="position unix oracle java junit svn api waterfall sqldeveloper">
           <h3>
-            <span itemprop="name">Domestic Airline</span>
-            <span class="dept" itemprop="department">Fare system</span>
+            <span itemprop="name" id='industry-name'>Passenger Airline</span>
+            <span itemprop="name" id='client-name'>Japan Airlines</span>
+            <span class="dept" itemprop="department">Fare Transmission system</span>
           </h3>
           <h4 itemprop="member" itemscope itemtype="http://schema.org/OrganizationRole">
             <span itemprop="roleName">Member of Technical Staff</span>
@@ -738,25 +764,14 @@
             </span>
           </h4>
           <ul itemprop="description">
-            <li>Technologies used: Java, Oracle SQL, Unix</li>
-            <li>Tools used: STS, SQL Developer, Tortoise SVN, Redmine, Putty, WinSCP</li>
-            <li>Software development methodology: Waterfall</li>
-            <li>Server: Apache Tomcat</li>
-            <li>
-              Developed middleware system using Java to transmit fare information.
-            </li>
-            <li>
-              Created design specifications, participated in design and code
-              reviews.
-            </li>
-            <li>
-              Worked on the design and initial development of a new platform
-              to import process fare files.
-            </li>
-            <li>
-              Developed a automation tool to perform performance testing
-              and provide results as graph in Excel.
-            </li>
+            <li id='proj-desc'>Project description: Create a middleware application to parse and transmit airline fare
+              information.</li>
+            <li id='tech-used'>Technologies used: Java, Oracle SQL, Unix</li>
+            <li id='tools-used'>Tools used: STS, SQL Developer, Tortoise SVN, Redmine, Putty, WinSCP</li>
+            <li id='sdlc-used'>Software development methodology: Waterfall</li>
+            <li id='server-used'>Server: Apache Tomcat</li>
+            <li id='core-resp'>Core responsibilties: Technical design and development, creating a UML diagrams, test
+              case creation and execution, performance testing and performance tuning, creating design documents</li>
           </ul>
         </section>
 
@@ -861,8 +876,7 @@
             <span itemprop="name">SCRUM.ORG</span>
             <ul>
               <li itemprop="award">
-                <a rel="external author" href="https://www.scrum.org/certificates/748664P">Professional Scrum Master
-                  I</a>
+                <a rel="external author" href="https://www.scrum.org/certificates/748664P">Professional Scrum Master</a>
               </li>
             </ul>
           </li>
@@ -881,7 +895,7 @@
         </ul>
       </section>
 
-      <section>
+      <section id='additional-links'>
         <h2>Additional Links</h2>
         <ul class="no-bullets educert ext-link-column-count">
           <li>
