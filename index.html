@@ -1,780 +1,935 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no" />
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <title>Kadhireshan Sivakozhundhu - Resume</title>
-  <meta name="keywords" content="kadhireshan sivakozhundhu, kadhireshan, resume, curriculum vitae, cv" />
-  <meta name="description" content="Kadhireshan Sivakozhundhu's Interactive Resume" />
-  <meta property="og:title" content="Resume of Kadhireshan Sivakozhundhu" />
-  <meta property="og:type" content="document" />
-  <meta property="og:url" content="https://douzo.github.io" />
-  <meta property="og:image" content="http://www.alvaromontoro.com/images/yo.jpg" />
-  <meta property="og:description" content="Kadhireshan Sivakozhundhu's Interactive Resume" />
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:url" content="https://douzo.github.io/" />
-  <meta name="twitter:title" content="Resume of Kadhireshan Sivakozhundhu" />
-  <meta name="twitter:description" content="Kadhireshan Sivakozhundhu's Interactive Resume" />
-  <meta name="twitter:image" content="https://douzo.github.io/images/yo.jpg" />
-  <style>
-    @import url("https://fonts.googleapis.com/css?family=Quicksand:400,700");
-
-    html,
-    body {
-      background: #ccc;
-      font-family: Quicksand, Arial, Verdana, sans-serif;
-      font-size: 14px;
-      color: #444;
-    }
-
-    main {
-      background: #fff;
-      box-sizing: border-box;
-      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
-      margin: 2rem auto;
-      padding: 2.75rem;
-      position: relative;
-    }
-
-    h1 {
-      margin: 0;
-      font-size: 2.5rem;
-      line-height: 2rem;
-      font-weight: normal;
-      color: #000;
-    }
-
-    h2 {
-      color: #47a;
-      font-size: 1rem;
-      font-weight: bold;
-      margin: 0;
-      margin-top: 1.5rem;
-      text-transform: uppercase;
-    }
-
-    h3 {
-      color: #111;
-      font-size: 1.25rem;
-      margin-top: 0rem;
-      margin: 0;
-      font-weight: normal;
-    }
-
-    h3 span.dept {
-      color: #aaa;
-    }
-
-
-    h3 span.organization {
-      font-size: 1.3rem;
-      text-transform: uppercase;
-    }
-
-    h3 span.dept::before {
-      content: "";
-      border-left: 1px solid #ccc;
-      padding-left: 0.4rem;
-    }
-
-    h4 {
-      margin: 0;
-      font-weight: normal;
-    }
-
-    h4 span.dates {
-      color: #888;
-      float: right;
-    }
-
-    h2 span.assignments {
-      text-transform: none;
-      font-style: italic;
-      line-height: 9px;
-    }
-
-    h2 span.assignments::after {
-      content: '';
-      border-bottom: 1px solid #ccc;
-      width: 100%;
-      display: inline-block;
-    }
-
-    .breakline::after {
-      content: '';
-      border-bottom: 1px solid #ccc;
-      width: 100%;
-      display: inline-block;
-    }
-
-    p {
-      font-size: 1rem;
-      margin-top: 0.5rem;
-      margin-bottom: 0;
-    }
-
-    a {
-      color: #369;
-    }
-
-    a:hover {
-      color: #36c;
-    }
-
-    time {
-      display: inline-block;
-      min-width: 2rem;
-    }
-
-    address {
-      font-style: normal;
-    }
-
-    .normal {
-      font-weight: normal;
-    }
-
-    .position {
-      margin-top: 0.75rem;
-      transition: opacity 0.7s;
-    }
-
-    .no-bullets,
-    .no-bullets ul {
-      list-style: none;
-      margin-left: 0;
-      padding-left: 0;
-      color: #000;
-      font-weight: bold;
-    }
-
-    .no-bullets ul {
-      font-weight: normal;
-    }
-
-    .no-bullets span {
-      color: #666;
-    }
-
-    #contact {
-      text-align: right;
-      font-size: 0.9rem;
-    }
-
-    #phone {
-      font-size: 1.25rem;
-      font-weight: bold;
-      text-decoration: none !important;
-    }
-
-    #jobtitle {
-      text-decoration: underline;
-      margin-top: 8px;
-    }
-
-    #location {
-      font-size: 1.1rem;
-    }
-
-    #languages {
-      column-count: 3;
-    }
-
-    a,
-    a:visited,
-    a:link,
-    a:active,
-    a:focus,
-    #languages label {
-      color: #395;
-    }
-
-    #professional-experience {
-      position: relative;
-    }
-
-    main input {
-      position: absolute;
-      left: -10000px;
-    }
-
-    .educert li {
-      flex: 1;
-      align-items: start;
-      justify-content: start;
-    }
-
-    .educert>li:nth-child(n + 2) {
-      margin-top: 0.75rem;
-    }
-
-    .ext-link-column-count {
-      column-count: 3;
-    }
-
-    #html:not(:checked)~div [for="html"]::before,
-    #javascript:not(:checked)~div [for="javascript"]::before,
-    #typescript:not(:checked)~div [for="typescript"]::before,
-    #css:not(:checked)~div [for="css"]::before,
-    #java:not(:checked)~div [for="java"]::before,
-    #angular:not(:checked)~div [for="angular"]::before,
-    #php:not(:checked)~div [for="php"]::before,
-    #sql:not(:checked)~div [for="sql"]::before,
-    #sqlserver:not(:checked)~div [for="sqlserver"]::before,
-    #mysql:not(:checked)~div [for="mysql"]::before,
-    #api:not(:checked)~div [for="api"]::before,
-    #mobile:not(:checked)~div [for="mobile"]::before,
-    #sqldeveloper:not(:checked)~div [for="sqldeveloper"]::before,
-    #vscode:not(:checked)~div [for="vscode"]::before,
-    #eclipse:not(:checked)~div [for="eclipse"]::before,
-    #jquery:not(:checked)~div [for="jquery"]::before {
-      content: "\2610 ";
-      font-size: 1.2rem;
-      color: #aaa;
-      font-weight: bold;
-    }
-
-    #html:checked~div [for="html"]::before,
-    #javascript:checked~div [for="javascript"]::before,
-    #typescript:checked~div [for="typescript"]::before,
-    #css:checked~div [for="css"]::before,
-    #java:checked~div [for="java"]::before,
-    #angular:checked~div [for="angular"]::before,
-    #php:checked~div [for="php"]::before,
-    #sql:checked~div [for="sql"]::before,
-    #sqlserver:checked~div [for="sqlserver"]::before,
-    #mysql:checked~div [for="mysql"]::before,
-    #mobile:checked~div [for="mobile"]::before,
-    #sqldeveloper:checked~div [for="sqldeveloper"]::before,
-    #eclipse:checked~div [for="eclipse"]::before,
-    #vscode:checked~div [for="vscode"]::before,
-    #api:checked~div [for="api"]::before,
-    #jquery:checked~div [for="jquery"]::before {
-      content: "\2611 ";
-      font-size: 1.2rem;
-      color: #000;
-      font-weight: bold;
-    }
-
-    #filters {
-      position: absolute;
-      top: 0;
-      right: 0;
-      z-index: 1;
-    }
-
-    #filters>ul {
-      list-style: none;
-      padding-left: 0;
-      margin: -0.5rem;
-      padding: 0.5rem;
-    }
-
-    #filters>ul>li>h3 {
-      margin: 0;
-      display: block;
-      text-align: right;
-      font-weight: bold;
-      font-size: 1rem;
-      color: #395;
-      text-transform: uppercase;
-    }
-
-    #filters>ul>li>h3::before {
-      content: "\2610 ";
-      font-size: 1.2rem;
-    }
-
-    input:checked~div #filters>ul>li>h3::before {
-      content: "\2611 ";
-    }
-
-    #filters>ul:hover {
-      background: white;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-    }
-
-    #filters>ul:hover ul {
-      list-style: none;
-      padding-left: 0;
-      display: block;
-      column-count: 4;
-    }
-
-    #filters>ul>li>ul {
-      position: relative;
-      top: 0;
-      right: 0;
-      display: none;
-      padding: 1rem;
-    }
-
-    label {
-      cursor: pointer;
-    }
-
-    input:checked~div section.position,
-    input:checked~div #languages label {
-      opacity: 0.25;
-    }
-
-    #html:checked~div .position.html,
-    #javascript:checked~div .position.javascript,
-    #typescript:checked~div .position.typescript,
-    #css:checked~div .position.css,
-    #java:checked~div .position.java,
-    #php:checked~div .position.php,
-    #sql:checked~div .position.sql,
-    #sqlserver:checked~div .position.sqlserver,
-    #mysql:checked~div .position.mysql,
-    #mobile:checked~div .position.mobile,
-    #api:checked~div .position.api,
-    #jquery:checked~div .position.jquery,
-    #angular:checked~div .position.angular,
-    #html:checked~div #languages [for="html"],
-    #javascript:checked~div #languages [for="javascript"],
-    #typescript:checked~div #languages [for="typescript"],
-    #angular:checked~div #languages [for="angular"],
-    #css:checked~div #languages [for="css"],
-    #java:checked~div #languages [for="java"],
-    #php:checked~div #languages [for="php"],
-    #sqldeveloper:checked~div #languages [for="sqldeveloper"],
-    #vscode:checked~div #languages [for="vscode"],
-    #eclipse:checked~div #languages [for="eclipse"],
-    #sql:checked~div #languages [for="sql"] {
-      opacity: 1;
-    }
-
-    #contact-mini {
-      display: flex;
-      margin-top: 1rem;
-      flex-direction: column;
-    }
-
-    #contact-mini>div {
-      font-size: 0.75rem;
-      flex: 1;
-    }
-
-    #contact-mini>div:nth-child(2) {
-      text-align: center;
-      flex: 2;
-    }
-
-    /* #contact-mini>div:last-child {
-      text-align: right;
-    } */
-
-    input:checked~div #languages label[for]::before,
-    input:not(:checked)~div #languages label[for]::before {
-      content: "";
-    }
-
-    #contact {
-      display: none;
-    }
-
-    #client-name {
-      display: none;
-    }
-
-    @media all and (min-width: 630px) {
-      main {
-        max-width: 600px;
-      }
-
-      #contact-mini>div {
-        font-size: 1rem;
-      }
-
-    }
-
-    @media all and (min-width: 1000px) {
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,shrink-to-fit=no"
+    />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <title>Kadhireshan Sivakozhundhu - Resume</title>
+    <meta
+      name="keywords"
+      content="kadhireshan sivakozhundhu, kadhireshan, resume, curriculum vitae, cv"
+    />
+    <meta
+      name="description"
+      content="Kadhireshan Sivakozhundhu's Interactive Resume"
+    />
+    <meta property="og:title" content="Resume of Kadhireshan Sivakozhundhu" />
+    <meta property="og:type" content="document" />
+    <meta property="og:url" content="https://douzo.github.io" />
+    <meta
+      property="og:image"
+      content="http://www.alvaromontoro.com/images/yo.jpg"
+    />
+    <meta
+      property="og:description"
+      content="Kadhireshan Sivakozhundhu's Interactive Resume"
+    />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:url" content="https://douzo.github.io/" />
+    <meta name="twitter:title" content="Resume of Kadhireshan Sivakozhundhu" />
+    <meta
+      name="twitter:description"
+      content="Kadhireshan Sivakozhundhu's Interactive Resume"
+    />
+    <meta
+      name="twitter:image"
+      content="https://douzo.github.io/images/yo.jpg"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css?family=Quicksand:400,700");
 
       html,
       body {
-        font-size: 16px;
+        background: #ccc;
+        font-family: Quicksand, Arial, Verdana, sans-serif;
+        font-size: 14px;
+        color: #444;
       }
 
       main {
-        max-width: 920px;
-        display: flex;
+        background: #fff;
+        box-sizing: border-box;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+        margin: 2rem auto;
+        padding: 2.75rem;
+        position: relative;
       }
 
-      main>div:first-child {
-        flex: 1;
+      h1 {
+        margin: 0;
+        font-size: 2.5rem;
+        line-height: 2rem;
+        font-weight: normal;
+        color: #000;
       }
 
-      main>div:last-child {
-        width: 22%;
-        margin-left: 4%;
+      h2 {
+        color: #47a;
+        font-size: 1rem;
+        font-weight: bold;
+        margin: 0;
+        margin-top: 1.5rem;
+        text-transform: uppercase;
       }
 
-      #languages {
-        column-count: 1;
+      h3 {
+        color: #111;
+        font-size: 1.25rem;
+        margin-top: 0rem;
+        margin: 0;
+        font-weight: normal;
       }
 
-      .educert {
-        display: block;
+      h3 span.dept,
+      .educert span.dates {
+        color: #aaa;
       }
 
-      .educert>li:nth-child(n + 2) {
+      h3 span.organization {
+        font-size: 1.3rem;
+        text-transform: uppercase;
+      }
+
+      h3 span.dept::before {
+        content: "";
+        border-left: 1px solid #ccc;
+        padding-left: 0.4rem;
+      }
+
+      h4 {
+        margin: 0;
+        font-weight: normal;
+      }
+
+      h4 span.dates {
+        color: #888;
+        float: right;
+      }
+
+      h2 span.assignments {
+        text-transform: none;
+        font-style: italic;
+        line-height: 9px;
+      }
+
+      h2 span.assignments::after {
+        content: "";
+        border-bottom: 1px solid #ccc;
+        width: 100%;
+        display: inline-block;
+      }
+
+      .breakline::after {
+        content: "";
+        border-bottom: 1px solid #ccc;
+        width: 100%;
+        display: inline-block;
+      }
+
+      p {
+        font-size: 1rem;
+        margin-top: 0.5rem;
+        margin-bottom: 0;
+      }
+
+      a {
+        color: #369;
+      }
+
+      a:hover {
+        color: #36c;
+      }
+
+      time {
+        display: inline-block;
+        min-width: 2rem;
+      }
+
+      address {
+        font-style: normal;
+      }
+
+      .normal {
+        font-weight: normal;
+      }
+
+      .position {
         margin-top: 0.75rem;
+        transition: opacity 0.7s;
       }
 
-      .ext-link-column-count {
-        column-count: 1;
+      .no-bullets,
+      .no-bullets ul {
+        list-style: none;
+        margin-left: 0;
+        padding-left: 0;
+        color: #000;
+        font-weight: 500;
+        margin-top: 0.5rem;
       }
 
-      #contact-mini {
-        display: none;
+      .no-bullets ul {
+        font-weight: normal;
+      }
+
+      .no-bullets span {
+        color: #666;
       }
 
       #contact {
-        display: block;
+        text-align: right;
+        font-size: 0.9rem;
       }
 
-      #email,
-      #website {
-        font-size: 0.9em;
-      }
-    }
-
-    @media all and (min-width: 1200px) {
-
-      html,
-      body {
-        font-size: 18px;
+      .educert span.dates {
+        font-size: 0.9rem;
       }
 
-      main {
-        max-width: 1120px;
+      #phone {
+        font-size: 1.25rem;
+        font-weight: bold;
+        text-decoration: none !important;
       }
 
-      #email,
-      #website {
-        font-size: 1em !important;
+      #jobtitle {
+        text-decoration: underline;
+        margin-top: 8px;
       }
 
-      .ext-link-column-count {
-        column-count: 1;
-      }
-    }
-
-    @media print {
-      @page {
-        size: A4;
-        /* this affects the margin in the printer settings */
-        margin: 5mm 5mm 0mm 5mm;
+      #location {
+        font-size: 1.1rem;
       }
 
-      html,
-      body {
-        background: #fff;
-        font-size: 16px;
-        width: 1000px;
+      #languages {
+        column-count: 3;
       }
 
       a,
       a:visited,
+      a:link,
       a:active,
       a:focus,
       #languages label {
-        text-decoration: none;
-        color: #000;
+        color: #395;
       }
 
-      main {
-        margin: 0;
-        max-width: 1000px;
-        display: flex;
-        box-shadow: none;
+      #professional-experience {
+        position: relative;
       }
 
-      main>div:first-child {
+      main input {
+        position: absolute;
+        left: -10000px;
+      }
+
+      .educert li {
         flex: 1;
+        align-items: start;
+        justify-content: start;
       }
 
-      main>div:last-child {
-        width: 22%;
-        margin-left: 4%;
-      }
-
-      #filters,
-      #tools-used,
-      #sdlc-used,
-      #server-used,
-      #add-resp,
-      #industry-name,
-      #additional-links {
-        display: none;
-      }
-
-
-      #client-name {
-        display: contents;
-      }
-
-      #languages {
-        column-count: 1;
-      }
-
-      .ext-link-column-count {
-        column-count: 1;
-      }
-
-      .educert {
-        display: block;
-      }
-
-      .educert>li:nth-child(n + 2) {
+      .educert > li:nth-child(n + 2) {
         margin-top: 0.75rem;
       }
 
-      .position {
-        opacity: 1 !important;
+      .ext-link-column-count {
+        column-count: 3;
+      }
+
+      section > section > h2 {
+        text-transform: none;
+      }
+      #html:not(:checked) ~ div [for="html"]::before,
+      #javascript:not(:checked) ~ div [for="javascript"]::before,
+      #typescript:not(:checked) ~ div [for="typescript"]::before,
+      #css:not(:checked) ~ div [for="css"]::before,
+      #java:not(:checked) ~ div [for="java"]::before,
+      #angular:not(:checked) ~ div [for="angular"]::before,
+      #php:not(:checked) ~ div [for="php"]::before,
+      #sql:not(:checked) ~ div [for="sql"]::before,
+      #sqlserver:not(:checked) ~ div [for="sqlserver"]::before,
+      #mysql:not(:checked) ~ div [for="mysql"]::before,
+      #api:not(:checked) ~ div [for="api"]::before,
+      #mobile:not(:checked) ~ div [for="mobile"]::before,
+      #sqldeveloper:not(:checked) ~ div [for="sqldeveloper"]::before,
+      #vscode:not(:checked) ~ div [for="vscode"]::before,
+      #eclipse:not(:checked) ~ div [for="eclipse"]::before,
+      #jquery:not(:checked) ~ div [for="jquery"]::before {
+        content: "\2610 ";
+        font-size: 1.2rem;
+        color: #aaa;
+        font-weight: bold;
+      }
+
+      #html:checked ~ div [for="html"]::before,
+      #javascript:checked ~ div [for="javascript"]::before,
+      #typescript:checked ~ div [for="typescript"]::before,
+      #css:checked ~ div [for="css"]::before,
+      #java:checked ~ div [for="java"]::before,
+      #angular:checked ~ div [for="angular"]::before,
+      #aws:checked ~ div [for="aws"]::before,
+      #php:checked ~ div [for="php"]::before,
+      #sql:checked ~ div [for="sql"]::before,
+      #sqlserver:checked ~ div [for="sqlserver"]::before,
+      #mysql:checked ~ div [for="mysql"]::before,
+      #mobile:checked ~ div [for="mobile"]::before,
+      #sqldeveloper:checked ~ div [for="sqldeveloper"]::before,
+      #eclipse:checked ~ div [for="eclipse"]::before,
+      #vscode:checked ~ div [for="vscode"]::before,
+      #api:checked ~ div [for="api"]::before,
+      #jquery:checked ~ div [for="jquery"]::before {
+        content: "\2611 ";
+        font-size: 1.2rem;
+        color: #000;
+        font-weight: bold;
+      }
+
+      #filters {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 1;
+      }
+
+      #filters > ul {
+        list-style: none;
+        padding-left: 0;
+        margin: -0.5rem;
+        padding: 0.5rem;
+      }
+
+      #filters > ul > li > h3 {
+        margin: 0;
+        display: block;
+        text-align: right;
+        font-weight: bold;
+        font-size: 1rem;
+        color: #395;
+        text-transform: uppercase;
+      }
+
+      #filters > ul > li > h3::before {
+        content: "\2610 ";
+        font-size: 1.2rem;
+      }
+
+      input:checked ~ div #filters > ul > li > h3::before {
+        content: "\2611 ";
+      }
+
+      #filters > ul:hover {
+        background: white;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      #filters > ul:hover ul {
+        list-style: none;
+        padding-left: 0;
+        display: block;
+        column-count: 4;
+      }
+
+      #filters > ul > li > ul {
+        position: relative;
+        top: 0;
+        right: 0;
+        display: none;
+        padding: 1rem;
+      }
+
+      label {
+        cursor: pointer;
+      }
+
+      input:checked ~ div section.position,
+      input:checked ~ div #languages label {
+        opacity: 0.25;
+      }
+
+      #html:checked ~ div .position.html,
+      #javascript:checked ~ div .position.javascript,
+      #typescript:checked ~ div .position.typescript,
+      #css:checked ~ div .position.css,
+      #java:checked ~ div .position.java,
+      #php:checked ~ div .position.php,
+      #sql:checked ~ div .position.sql,
+      #sqlserver:checked ~ div .position.sqlserver,
+      #mysql:checked ~ div .position.mysql,
+      #mobile:checked ~ div .position.mobile,
+      #api:checked ~ div .position.api,
+      #jquery:checked ~ div .position.jquery,
+      #angular:checked ~ div .position.angular,
+      #aws:checked ~ div .position.aws,
+      #html:checked ~ div #languages [for="html"],
+      #javascript:checked ~ div #languages [for="javascript"],
+      #typescript:checked ~ div #languages [for="typescript"],
+      #angular:checked ~ div #languages [for="angular"],
+      #aws:checked ~ div #languages [for="aws"],
+      #api:checked ~ div #languages [for="api"],
+      #css:checked ~ div #languages [for="css"],
+      #java:checked ~ div #languages [for="java"],
+      #php:checked ~ div #languages [for="php"],
+      #sqldeveloper:checked ~ div #languages [for="sqldeveloper"],
+      #vscode:checked ~ div #languages [for="vscode"],
+      #eclipse:checked ~ div #languages [for="eclipse"],
+      #sql:checked ~ div #languages [for="sql"] {
+        opacity: 1;
       }
 
       #contact-mini {
-        display: none;
+        display: flex;
+        margin-top: 1rem;
+        flex-direction: column;
+      }
+
+      #contact-mini > div {
+        font-size: 0.75rem;
+        flex: 1;
+      }
+
+      #contact-mini > div:nth-child(2) {
+        text-align: center;
+        flex: 2;
+      }
+
+      /* #contact-mini>div:last-child {
+      text-align: right;
+    } */
+
+      input:checked ~ div #languages label[for]::before,
+      input:not(:checked) ~ div #languages label[for]::before {
+        content: "";
       }
 
       #contact {
-        display: block;
+        display: none;
       }
-    }
-  </style>
-</head>
 
-<body>
-  <main id="resume" itemscope itemtype="http://schema.org/Person">
-    <input type="checkbox" id="html" />
-    <input type="checkbox" id="javascript" />
-    <input type="checkbox" id="typescript" />
-    <input type="checkbox" id="css" />
-    <input type="checkbox" id="java" />
-    <input type="checkbox" id="php" />
-    <input type="checkbox" id="sql" />
-    <input type="checkbox" id="sqlserver" />
-    <input type="checkbox" id="mysql" />
-    <input type="checkbox" id="jquery" />
-    <input type="checkbox" id="mobile" />
-    <input type="checkbox" id="api" />
-    <input type="checkbox" id="angular" />
-    <div>
-      <header>
-        <h1 itemprop="name">Kadhireshan Sivakozhundhu</h1>
-        <h3 id="jobtitle"><span itemprop="jobTitle">Full Stack Web Application Developer</span></h3>
-        <p id="objective" itemprop="description">
-          <span itemprop="knowsAbout">Innovative and task-driven with
-            strong experience creating high-quality, scalable, and high-performance web
-            applications. Proficient in working with databases, creating user interfaces, writing and testing code,
-            troubleshooting issue and implementing new features based on user feedback. </span>
-        </p>
-        <address id="contact-mini">
-          <div itemprop="email">
-            <a href="mailto:kadhiresananand@gmail.com">kadhiresananand@gmail.com</a>
-          </div>
-          <a href="tel:+818043399814"><span itemprop="telephone">(080)-4339-9814</span></a>
-          <div>
-            <a rel="external author" href="https://douzo.github.io" itemprop="url">douzo.github.io</a>
-          </div>
-        </address>
-      </header>
-      <section id="professional-experience">
-        <h2>Experience</h2>
-        <div id="filters">
-          <ul>
-            <li>
-              <h3>Filters</h3>
-              <ul>
-                <li><label for="css">CSS</label></li>
-                <li><label for="html">HTML</label></li>
-                <li><label for="java">Java</label></li>
-                <li><label for="typescript">TypeScript</label></li>
-                <li><label for="javascript">JavaScript</label></li>
-                <li><label for="sql">SQL</label></li>
-                <li><label for="angular">Angular</label></li>
-                <li><label for="api">REST APIs</label></li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-        <section itemprop="memberOf" itemscope itemtype="http://schema.org/Organization"
-          class="position html css javascript api java angular unix oracle agile waterfall sql">
-          <h3>
-            <span class="organization" itemprop="name">TATA CONSULTANCY SERVICES</span>
+      #client-name {
+        display: none;
+      }
+
+      @media all and (min-width: 630px) {
+        main {
+          max-width: 600px;
+        }
+
+        #contact-mini > div {
+          font-size: 1rem;
+        }
+      }
+
+      @media all and (min-width: 1000px) {
+        html,
+        body {
+          font-size: 16px;
+        }
+
+        main {
+          max-width: 920px;
+          display: flex;
+        }
+
+        main > div:first-child {
+          flex: 1;
+        }
+
+        main > div:last-child {
+          width: 22%;
+          margin-left: 4%;
+        }
+
+        #languages {
+          column-count: 1;
+        }
+
+        .educert {
+          display: block;
+        }
+
+        .educert > li:nth-child(n + 2) {
+          margin-top: 0.75rem;
+        }
+
+        .ext-link-column-count {
+          column-count: 1;
+        }
+
+        #contact-mini {
+          display: none;
+        }
+
+        #contact {
+          display: block;
+        }
+
+        #email,
+        #website {
+          font-size: 0.9em;
+        }
+      }
+
+      @media all and (min-width: 1200px) {
+        html,
+        body {
+          font-size: 18px;
+        }
+
+        main {
+          max-width: 1120px;
+        }
+
+        #email,
+        #website {
+          font-size: 1em !important;
+        }
+
+        .ext-link-column-count {
+          column-count: 1;
+        }
+      }
+
+      @media print {
+        @page {
+          size: A4;
+          /* this affects the margin in the printer settings */
+          margin: 5mm 5mm 0mm 5mm;
+        }
+
+        html,
+        body {
+          background: #fff;
+          font-size: 16px;
+          width: 1000px;
+        }
+
+        a,
+        a:visited,
+        a:active,
+        a:focus,
+        #languages label {
+          text-decoration: none;
+          color: #000;
+        }
+
+        main {
+          margin: 0;
+          max-width: 1000px;
+          display: flex;
+          box-shadow: none;
+        }
+
+        main > div:first-child {
+          flex: 1;
+        }
+
+        main > div:last-child {
+          width: 22%;
+          margin-left: 4%;
+        }
+
+        #filters,
+        #tools-used,
+        #sdlc-used,
+        #server-used,
+        #add-resp,
+        #industry-name,
+        #additional-links {
+          display: none;
+        }
+
+        #client-name {
+          display: contents;
+        }
+
+        #languages {
+          column-count: 1;
+        }
+
+        .ext-link-column-count {
+          column-count: 1;
+        }
+
+        .educert {
+          display: block;
+        }
+
+        .educert > li:nth-child(n + 2) {
+          margin-top: 0.75rem;
+        }
+
+        .position {
+          opacity: 1 !important;
+        }
+
+        #contact-mini {
+          display: none;
+        }
+
+        #contact {
+          display: block;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <main id="resume" itemscope itemtype="http://schema.org/Person">
+      <input type="checkbox" id="html" />
+      <input type="checkbox" id="javascript" />
+      <input type="checkbox" id="typescript" />
+      <input type="checkbox" id="css" />
+      <input type="checkbox" id="java" />
+      <input type="checkbox" id="php" />
+      <input type="checkbox" id="sql" />
+      <input type="checkbox" id="sqlserver" />
+      <input type="checkbox" id="mysql" />
+      <input type="checkbox" id="jquery" />
+      <input type="checkbox" id="mobile" />
+      <input type="checkbox" id="api" />
+      <input type="checkbox" id="angular" />
+      <input type="checkbox" id="aws" />
+      <div>
+        <header>
+          <h1 itemprop="name">Kadhireshan Sivakozhundhu</h1>
+          <h3 id="jobtitle">
+            <span itemprop="jobTitle">Web Application Engineer</span>
           </h3>
-
-          <h4 itemprop="member" itemscope itemtype="http://schema.org/OrganizationRole">
-            <span itemprop="roleName">IT Analyst</span>
-            <span class="dates">
-              <time itemprop="startDate">June 2015</time>
-              -
-              <time itemprop="endDate">Till date</time>
+          <p id="objective" itemprop="description">
+            <span itemprop="knowsAbout"
+              >Innovative and task-driven with strong experience creating
+              high-quality, scalable, and high-performance web applications.
+              Proficient in working with databases, creating user interfaces,
+              creating API's, troubleshooting issue, estimation and system
+              design.
             </span>
-          </h4>
-        </section>
-        <h2><span class="assignments">Projects</span></h2>
+          </p>
+          <address id="contact-mini">
+            <div itemprop="email">
+              <a href="mailto:kadhiresananand@gmail.com"
+                >kadhiresananand@gmail.com</a
+              >
+            </div>
+            <a href="tel:+818043399814"
+              ><span itemprop="telephone">(080)-4339-9814</span></a
+            >
+            <div>
+              <a
+                rel="external author"
+                href="https://douzo.github.io"
+                itemprop="url"
+                >douzo.github.io</a
+              >
+            </div>
+          </address>
+        </header>
+        <section id="professional-experience">
+          <h2>Experience</h2>
+          <div id="filters">
+            <ul>
+              <li>
+                <h3>Filters</h3>
+                <ul>
+                  <li><label for="css">CSS</label></li>
+                  <li><label for="html">HTML</label></li>
+                  <li><label for="java">Java</label></li>
+                  <li><label for="typescript">TypeScript</label></li>
+                  <li><label for="javascript">JavaScript</label></li>
+                  <li><label for="sql">SQL</label></li>
+                  <li><label for="angular">Angular</label></li>
+                  <li><label for="api">REST APIs</label></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <section
+            itemprop="memberOf"
+            itemscope
+            itemtype="http://schema.org/Organization"
+            class="position html css javascript api java angular unix oracle agile waterfall sql"
+          >
+            <h3>
+              <span class="organization" itemprop="name"
+                >TATA CONSULTANCY SERVICES</span
+              >
+            </h3>
 
-        <section itemprop="memberOf" itemscope itemtype="http://schema.org/Organization"
-          class="position html javascript typescript css bootstrap material sql angular unix svn mobile api agile sqldeveloper vscode">
-          <h3>
-            <span itemprop="name" id='industry-name'>Car Carrier Shipping</span>
-            <span itemprop="name" id='client-name'>NYK Line</span>
-            <span class="dept" itemprop="department">Schedule Planning and Booking system</span>
-          </h3>
-          <h4 itemprop="member" itemscope itemtype="http://schema.org/OrganizationRole">
-            <span itemprop="roleName">Technical Lead</span>
-            <span class="dates">
-              <time itemprop="startDate">October 2018</time>
-              -
-              <time itemprop="endDate">Till date</time>
-            </span>
-          </h4>
-          <ul itemprop="description">
-            <li id='proj-desc'>Project description: Create a web application for sales agents around the world to
-              create, update and actualize schedules and
-              bookings for Pure Car
-              Carrier Vessels.</li>
-            <li id='tech-used'>Technologies used: Angular, Java, Spring boot, Oracle SQL, Unix, ag-grid, Jenkins,
-              Docker, AWS, PowerBI</li>
-            <li id='tools-used'>Tools used: VsCode, SQL Developer, Tortoise SVN, ServiceNow, Redmine, Postman, Putty,
+            <h4
+              itemprop="member"
+              itemscope
+              itemtype="http://schema.org/OrganizationRole"
+            >
+              <span itemprop="roleName">IT Analyst</span>
+              <span class="dates">
+                <time itemprop="startDate">June 2015</time>
+                -
+                <time itemprop="endDate">Till date</time>
+              </span>
+            </h4>
+          </section>
+          <h2><span class="assignments">Projects</span></h2>
+
+          <section
+            itemprop="memberOf"
+            itemscope
+            itemtype="http://schema.org/Organization"
+            class="position html javascript typescript css bootstrap material sql angular unix svn git aws mobile api agile sqldeveloper vscode"
+          >
+            <h3>
+              <span itemprop="name" id="industry-name"
+                >Car Carrier Shipping</span
+              >
+              <span itemprop="name" id="client-name">NYK Line</span>
+              <span class="dept" itemprop="department"
+                >Schedule Planning and Booking system</span
+              >
+            </h3>
+            <h4
+              itemprop="member"
+              itemscope
+              itemtype="http://schema.org/OrganizationRole"
+            >
+              <span itemprop="roleName">Technical Lead</span>
+              <span class="dates">
+                <time itemprop="startDate">October 2018</time>
+                -
+                <time itemprop="endDate">Till date</time>
+              </span>
+            </h4>
+            <ul itemprop="description">
+              <li id="proj-desc">
+                Project description: Creating web applications and REST API's to
+                create, update, actualize and track the schedules and the
+                bookings and space associated for Pure Car Carrier Vessels.
+              </li>
+              <li id="tech-used">
+                Technologies used: Angular, Java, Spring boot, Node JS, Oracle
+                SQL, Unix, ag-grid, Jenkins, Docker, AWS, PowerBI, Git, SVN
+              </li>
+              <!-- <li id='tools-used'>Tools used: VsCode, SQL Developer, Tortoise SVN, ServiceNow, Redmine, Postman, Putty,
               WinSCP, Sketch, Git
-            </li>
-            <li id='sdlc-used'>Software development methodology: Agile</li>
-            <li id='server-used'>Server: IBM Websphere Liberty, Ngnix</li>
-            <li id='core-resp'>Core responsibilities: Resource planning, Task assignment, Code review, Sprint planning,
-              Software
-              documentation, Technical design and development</li>
-            <li id='add-resp'>Additional responsibilities: Ticket creation, Staff training, Risk assessment, Production
-              application
-              monitoring, Sketch design for screens</li>
-          </ul>
-        </section>
+            </li> -->
+              <li id="sdlc-used">Software development methodology: Agile</li>
+              <li id="server-used">
+                Server: IBM Websphere Liberty, Ngnix, Serverless
+              </li>
+              <li id="core-resp">
+                Core responsibilities: Resource planning, Task assignment, Code
+                review, Sprint planning, Software documentation, Technical
+                design and development
+              </li>
+              <li id="add-resp">
+                Additional responsibilities: Ticket creation, Staff training and
+                mentoring, Risk assessment, Production application monitoring,
+                Sketch design for screens
+              </li>
+            </ul>
+          </section>
 
+          <section
+            itemprop="memberOf"
+            itemscope
+            itemtype="http://schema.org/Organization"
+            class="position css html typescript javascript css bootstrap oracle angular mobile api agile sqldeveloper eclipse vscode"
+          >
+            <h3>
+              <span itemprop="name" id="industry-name"
+                >Car Carrier Shipping</span
+              >
+              <span itemprop="name" id="client-name">NYK Line</span>
+              <span class="dept" itemprop="department"
+                >Inventory Management System</span
+              >
+            </h3>
+            <h4
+              itemprop="member"
+              itemscope
+              itemtype="http://schema.org/OrganizationRole"
+            >
+              <span itemprop="roleName">Full Stack Engineer</span>
+              <span class="dates">
+                <time itemprop="startDate">July 2018</time>
+                -
+                <time itemprop="endDate">Till date</time>
+              </span>
+            </h4>
+            <ul itemprop="description">
+              <li id="proj-desc">
+                Project description: Create a Responsive web application to
+                create, update and keep track of the specific types of cargoes
+                in vessels which will be used by port agents around the world.
+              </li>
+              <li id="tech-used">
+                Technologies used: Angular 4, Java, Spring boot, Oracle SQL,
+                Unix, Selenium
+              </li>
+              <!-- <li id='tools-used'>Tools used: VsCode, STS, SQL Developer, Tortoise SVN, ServiceNow, Redmine, Postman,
+              Putty, WinSCP</li> -->
+              <li id="sdlc-used">Software development methodology: Agile</li>
+              <li id="server-used">Server: IBM Websphere</li>
+              <li id="core-resp">
+                Core responsibilities: Resource planning, Task assignment, Code
+                review, Sprint planning, Software documentation, Technical
+                design and development
+              </li>
+              <li id="add-resp">
+                Additional responsibilities: Staff training, Risk assessment,
+                Production application monitoring
+              </li>
+            </ul>
+          </section>
 
-        <section itemprop="memberOf" itemscope itemtype="http://schema.org/Organization"
-          class="position css html typescript javascript css bootstrap oracle angular mobile api agile sqldeveloper eclipse vscode">
-          <h3>
-            <span itemprop="name" id='industry-name'>Car Carrier Shipping</span>
-            <span itemprop="name" id='client-name'>NYK Line</span>
-            <span class="dept" itemprop="department">Inventory Management System</span>
-          </h3>
-          <h4 itemprop="member" itemscope itemtype="http://schema.org/OrganizationRole">
-            <span itemprop="roleName">Full Stack Engineer</span>
-            <span class="dates">
-              <time itemprop="startDate">July 2018</time>
-              -
-              <time itemprop="endDate">Till date</time>
-            </span>
-          </h4>
-          <ul itemprop="description">
-            <li id='proj-desc'>Project description: Create a Responsive web application to create, update and keep track
-              of the
-              specific types of cargoes in vessels which will be used by port agents around the world.</li>
-            <li id='tech-used'>Technologies used: Angular 4, Java, Spring boot, Oracle SQL, Unix</li>
-            <li id='tools-used'>Tools used: VsCode, STS, SQL Developer, Tortoise SVN, ServiceNow, Redmine, Postman,
-              Putty, WinSCP</li>
-            <li id='sdlc-used'>Software development methodology: Agile</li>
-            <li id='server-used'>Server: IBM Websphere</li>
-            <li id='core-resp'>Core responsibilities: Resource planning, Task assignment, Code review, Sprint planning,
-              Software documentation, Technical design and development</li>
-            <li id='add-resp'>Additional responsibilities: Staff training, Risk assessment, Production application
-              monitoring</li>
-          </ul>
-        </section>
+          <section
+            itemprop="memberOf"
+            itemscope
+            itemtype="http://schema.org/Organization"
+            class="position java junit sql angular css bootstrap jquery mobile api agile sqldeveloper eclipse vscode"
+          >
+            <h3>
+              <span itemprop="name" id="industry-name"
+                >Car Carrier Shipping</span
+              >
+              <span itemprop="name" id="client-name">NYK Line</span>
+              <span class="dept" itemprop="department"
+                >Vessel Schedule Planning</span
+              >
+            </h3>
+            <h4
+              itemprop="member"
+              itemscope
+              itemtype="http://schema.org/OrganizationRole"
+            >
+              <span itemprop="roleName">Back End Engineer</span>
+              <span class="dates">
+                <time itemprop="startDate">March 2018</time>
+                -
+                <time itemprop="endDate">June 2018</time>
+              </span>
+            </h4>
+            <ul itemprop="description">
+              <li id="proj-desc">
+                Project description: Upgrade a legacy Java application from the
+                Seaser framework to Spring and use MyBatis as ORM. Create JUnit
+                test cases to push the team towards test-driven development
+                (TDD).
+              </li>
+              <li id="tech-used">
+                Technologies used: Spring, Junit, Oracle SQL, AngularJS
+              </li>
+              <!-- <li id='tools-used'>Tools used: VsCode, STS, SQL Developer, Tortoise SVN, Redmine, Postman, Putty, WinSCP
+            </li> -->
+              <li id="sdlc-used">Software development methodology: Agile</li>
+              <li id="server-used">Server: IBM Websphere</li>
+              <li id="core-resp">
+                Core responsibilities: Technical design and development, bridge
+                engineer, requirement gathering and planning.
+              </li>
+            </ul>
+          </section>
 
+          <section
+            itemprop="memberOf"
+            itemscope
+            itemtype="http://schema.org/Organization"
+            class="position java javascript angular html css jquery mobile waterfall eclipse"
+          >
+            <h3>
+              <span itemprop="name" id="industry-name">Cargo Airline</span>
+              <span itemprop="name" id="client-name"
+                >Nippon Cargo Airlines</span
+              >
+              <span class="dept" itemprop="department"
+                >Message conversion system</span
+              >
+            </h3>
+            <h4
+              itemprop="member"
+              itemscope
+              itemtype="http://schema.org/OrganizationRole"
+            >
+              <span itemprop="roleName">Web Developer</span>
+              <span class="dates">
+                <time itemprop="startDate">June 2017</time>
+                -
+                <time itemprop="endDate">March 2018</time>
+              </span>
+            </h4>
+            <ul itemprop="description">
+              <li id="proj-desc">
+                Project description: Create a web application for in-house usage
+                which parses PDF's and manipulates in the required way and sends
+                them to print servers. Fetch real-time weather details from
+                different weather servers and process them. Get data from ACARS
+                (Aircraft Communication Addressing and Reporting System) and
+                create reports from it.
+              </li>
+              <li id="tech-used">
+                Technologies used: Java, Spring, AngularJS, MySQL
+              </li>
+              <!-- <li id='tools-used'>Tools used: VsCode, STS, MySQL Workbench, Tortoise SVN</li> -->
+              <li id="sdlc-used">
+                Software development methodology: Waterfall
+              </li>
+              <li id="server-used">Server: Apache Tomcat</li>
+              <li id="core-resp">
+                Core responsibilities: Technical design and development,
+                creating UML diagrams, test case creation and execution,
+                performance testing, performance tuning and creating design
+                documents
+              </li>
+            </ul>
+          </section>
 
-        <section itemprop="memberOf" itemscope itemtype="http://schema.org/Organization"
-          class="position java junit sql angular css bootstrap jquery mobile api agile sqldeveloper eclipse vscode">
-          <h3>
-            <span itemprop="name" id='industry-name'>Car Carrier Shipping</span>
-            <span itemprop="name" id='client-name'>NYK Line</span>
-            <span class="dept" itemprop="department">Vessel Schedule Planning</span>
-          </h3>
-          <h4 itemprop="member" itemscope itemtype="http://schema.org/OrganizationRole">
-            <span itemprop="roleName">Back End Engineer</span>
-            <span class="dates">
-              <time itemprop="startDate">March 2018</time>
-              -
-              <time itemprop="endDate">June 2018</time>
-            </span>
-          </h4>
-          <ul itemprop="description">
-            <li id='proj-desc'>Project description: Upgrade a legacy Java application from the Seaser framework to Spring and
-              use MyBatis as ORM. Create JUnit test cases to push the team towards test-driven development (TDD). </li>
-            <li id='tech-used'>Technologies used: Spring, Junit, Oracle SQL, AngularJS</li>
-            <li id='tools-used'>Tools used: VsCode, STS, SQL Developer, Tortoise SVN, Redmine, Postman, Putty, WinSCP
-            </li>
-            <li id='sdlc-used'>Software development methodology: Agile</li>
-            <li id='server-used'>Server: IBM Websphere</li>
-            <li id='core-resp'>Core responsibilities: Technical design and development, bridge engineer, requirement gathering and planning.</li>
-            </li>
-          </ul>
-        </section>
+          <section
+            itemprop="memberOf"
+            itemscope
+            itemtype="http://schema.org/Organization"
+            class="position unix oracle java junit svn api waterfall sqldeveloper"
+          >
+            <h3>
+              <span itemprop="name" id="industry-name">Passenger Airline</span>
+              <span itemprop="name" id="client-name">Japan Airlines</span>
+              <span class="dept" itemprop="department"
+                >Fare Transmission system</span
+              >
+            </h3>
+            <h4
+              itemprop="member"
+              itemscope
+              itemtype="http://schema.org/OrganizationRole"
+            >
+              <span itemprop="roleName">Member of Technical Staff</span>
+              <span class="dates">
+                <time itemprop="startDate">June 2015</time>
+                -
+                <time itemprop="endDate">May 2017</time>
+              </span>
+            </h4>
+            <ul itemprop="description">
+              <li id="proj-desc">
+                Project description: Create a middleware application to parse
+                and transmit airline fare information.
+              </li>
+              <li id="tech-used">Technologies used: Java, Oracle SQL, Unix</li>
+              <!-- <li id='tools-used'>Tools used: STS, SQL Developer, Tortoise SVN, Redmine, Putty, WinSCP</li> -->
+              <li id="sdlc-used">
+                Software development methodology: Waterfall
+              </li>
+              <li id="server-used">Server: Apache Tomcat</li>
+              <li id="core-resp">
+                Core responsibilities: Technical design and development,
+                creating UML diagrams, test case creation and execution,
+                performance testing and performance tuning, creating design
+                documents
+              </li>
+            </ul>
+          </section>
 
-
-        <section itemprop="memberOf" itemscope itemtype="http://schema.org/Organization"
-          class="position java javascript angular html css jquery mobile waterfall eclipse">
-          <h3>
-            <span itemprop="name" id='industry-name'>Cargo Airline</span>
-            <span itemprop="name" id='client-name'>Nippon Cargo Airlines</span>
-            <span class="dept" itemprop="department">Message conversion system</span>
-          </h3>
-          <h4 itemprop="member" itemscope itemtype="http://schema.org/OrganizationRole">
-            <span itemprop="roleName">Web Developer</span>
-            <span class="dates">
-              <time itemprop="startDate">June 2017</time>
-              -
-              <time itemprop="endDate">March 2018</time>
-            </span>
-          </h4>
-          <ul itemprop="description">
-            <li id='proj-desc'>Project description: Create a web application for in-house usage which parses PDF's and
-              manipulates in the required way and sends them to print servers. Fetch real-time weather details from different
-              weather servers and process them. Get data from ACARS (Aircraft Communication  Addressing and Reporting
-              System) and create reports from it.</li>
-            <li id='tech-used'>Technologies used: Java, Spring, AngularJS, MySQL</li>
-            <li id='tools-used'>Tools used: VsCode, STS, MySQL Workbench, Tortoise SVN</li>
-            <li id='sdlc-used'>Software development methodology: Waterfall</li>
-            <li id='server-used'>Server: Apache Tomcat</li>
-            <li id='core-resp'>Core responsibilities: Technical design and development, creating UML diagrams, test
-              case creation and execution, performance testing, performance tuning and creating design documents</li>
-          </ul>
-        </section>
-
-        <section itemprop="memberOf" itemscope itemtype="http://schema.org/Organization"
-          class="position unix oracle java junit svn api waterfall sqldeveloper">
-          <h3>
-            <span itemprop="name" id='industry-name'>Passenger Airline</span>
-            <span itemprop="name" id='client-name'>Japan Airlines</span>
-            <span class="dept" itemprop="department">Fare Transmission system</span>
-          </h3>
-          <h4 itemprop="member" itemscope itemtype="http://schema.org/OrganizationRole">
-            <span itemprop="roleName">Member of Technical Staff</span>
-            <span class="dates">
-              <time itemprop="startDate">June 2015</time>
-              -
-              <time itemprop="endDate">May 2017</time>
-            </span>
-          </h4>
-          <ul itemprop="description">
-            <li id='proj-desc'>Project description: Create a middleware application to parse and transmit airline fare
-              information.</li>
-            <li id='tech-used'>Technologies used: Java, Oracle SQL, Unix</li>
-            <li id='tools-used'>Tools used: STS, SQL Developer, Tortoise SVN, Redmine, Putty, WinSCP</li>
-            <li id='sdlc-used'>Software development methodology: Waterfall</li>
-            <li id='server-used'>Server: Apache Tomcat</li>
-            <li id='core-resp'>Core responsibilities: Technical design and development, creating UML diagrams, test
-              case creation and execution, performance testing and performance tuning, creating design documents</li>
-          </ul>
-        </section>
-
-        <!-- <section itemprop="memberOf" itemscope itemtype="http://schema.org/Organization"
+          <!-- <section itemprop="memberOf" itemscope itemtype="http://schema.org/Organization"
           class="position php mysql html javascript css jquery sql mobile api">
           <h3>
             <span itemprop="name">Personal Projects</span>
@@ -804,113 +959,214 @@
             </li>
           </ul>
         </section> -->
-      </section>
-    </div>
-    <div>
-      <address id="contact" class="contact-2">
-        <div id="location" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-          <span itemprop="addressLocality">Tokyo</span>,
-          <span itemprop="addressRegion">Japan</span>
-        </div>
-        <a href="tel:+818043399814" id="phone">(080)-4339-9814</a>
-        <div>
-          <a href="mailto:kadhiresananand@gmail.com" id="email">kadhiresananand@gmail.com</a>
-        </div>
-        <div>
-          <a href="https://douzo.github.io" id="website">douzo.github.io</a>
-        </div>
-      </address>
-
-      <section>
-        <h2>Programming Languages</h2>
-        <ul class="no-bullets" id="languages">
-          <li><label for="html" itemprop="knowsAbout">HTML</label></li>
-          <li><label for="css" itemprop="knowsAbout">CSS</label></li>
-          <li><label for="typescript" itemprop="knowsAbout">Typescript</label></li>
-          <li><label for="javascript" itemprop="knowsAbout">JavaScript</label></li>
-          <li><label for="java" itemprop="knowsAbout">Java</label></li>
-          <li><label for="sql" itemprop="knowsAbout">SQL</label></li>
-        </ul>
-      </section>
-
-      <section>
-        <h2>Source Control</h2>
-        <ul class="no-bullets" id="languages">
-          <li><label for="github" itemprop="knowsAbout">Github</label></li>
-          <li><label for="svn" itemprop="knowsAbout">SVN</label></li>
-        </ul>
-      </section>
-
-      <section>
-        <h2>Tools</h2>
-        <ul class="no-bullets" id="languages">
-          <li><label for="vscode" itemprop="knowsAbout">VS Code</label></li>
-          <li><label for="sqldeveloper" itemprop="knowsAbout">SQL Developer</label></li>
-          <li><label for="eclipse" itemprop="knowsAbout">Eclipse/STS</label></li>
-        </ul>
-      </section>
-
-      <section>
-        <h2>Education</h2>
-        <ul class="no-bullets educert">
-          <li itemprop="alumniOf" itemscope itemtype="http://schema.org/EducationalOrganization">
-            <span itemprop="name">Pondicherry University</span>
-            <ul>
-              <li itemprop="award">B.Tech. Computer Science</li>
+        </section>
+      </div>
+      <div id="sidebar">
+        <address id="contact" class="contact-2">
+          <div
+            id="location"
+            itemprop="address"
+            itemscope
+            itemtype="http://schema.org/PostalAddress"
+          >
+            <span itemprop="addressLocality">Tokyo</span>,
+            <span itemprop="addressRegion">Japan</span>
+          </div>
+          <a href="tel:+818043399814" id="phone">(080)-4339-9814</a>
+          <div>
+            <a href="mailto:kadhiresananand@gmail.com" id="email"
+              >kadhiresananand@gmail.com</a
+            >
+          </div>
+          <div>
+            <a href="https://douzo.github.io" id="website">douzo.github.io</a>
+          </div>
+        </address>
+        <section>
+          <h2>Profession Skills</h2>
+          <section>
+            <h2>Programming Languages</h2>
+            <ul class="no-bullets" id="languages">
+              <li><label for="html" itemprop="knowsAbout">HTML</label></li>
+              <li><label for="css" itemprop="knowsAbout">CSS</label></li>
+              <li>
+                <label for="typescript" itemprop="knowsAbout">Typescript</label>
+              </li>
+              <li>
+                <label for="javascript" itemprop="knowsAbout">JavaScript</label>
+              </li>
+              <li><label for="java" itemprop="knowsAbout">Java</label></li>
+              <li><label for="sql" itemprop="knowsAbout">SQL</label></li>
             </ul>
-          </li>
-        </ul>
-      </section>
+          </section>
 
-      <section>
-        <h2>Certifications</h2>
-        <ul class="no-bullets educert">
-          <!-- <li itemprop="alumniOf" itemscope itemtype="http://schema.org/EducationalOrganization">
+          <section>
+            <h2>Cloud Services</h2>
+            <ul class="no-bullets" id="languages">
+              <li><label for="aws" itemprop="knowsAbout">AWS</label></li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>Servers</h2>
+            <ul class="no-bullets" id="languages">
+              <li>
+                <label for="websphere" itemprop="knowsAbout">Websphere</label>
+              </li>
+              <li><label for="tomcat" itemprop="knowsAbout">Tomcat</label></li>
+              <li>
+                <label for="lambda" itemprop="knowsAbout"
+                  >Serverless (AWS Lambda)</label
+                >
+              </li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>Methodology</h2>
+            <ul class="no-bullets" id="languages">
+              <li>
+                <label for="agile" itemprop="knowsAbout">Agile</label>
+              </li>
+              <li>
+                <label for="waterfall" itemprop="knowsAbout">Waterfall</label>
+              </li>
+            </ul>
+          </section>
+
+          <!-- <section>
+  <h2>Profession Skills</h2>
+  <ul class="no-bullets" id="languages">
+    <li><label for="html" itemprop="knowsAbout">HTML, CSS</label></li>
+    <li><label for="javascript" itemprop="knowsAbout">JavaScript, TypeScript</label></li>
+    <li><label for="java" itemprop="knowsAbout">Java</label></li>
+    <li><label for="oracle" itemprop="knowsAbout">Oracle SQL, MySQL</label></li>
+    <li><label for="angular" itemprop="knowsAbout">Node.js, Angular, ag-grid, </label></li>
+    <li><label for="api" itemprop="knowsAbout">REST API</label></li>
+    <li><label for="aws" itemprop="knowsAbout">AWS</label></li>
+    <li><label for="aws" itemprop="knowsAbout">Agile, Waterfall</label></li>
+  </ul>
+</section> -->
+
+          <section>
+            <h2>Source Control</h2>
+            <ul class="no-bullets" id="languages">
+              <li><label for="github" itemprop="knowsAbout">Github</label></li>
+              <li><label for="svn" itemprop="knowsAbout">SVN</label></li>
+            </ul>
+          </section>
+
+          <!-- <section>
+            <h2>IDE</h2>
+            <ul class="no-bullets" id="languages">
+              <li><label for="vscode" itemprop="knowsAbout">VS Code</label></li>
+              <li>
+                <label for="sqldeveloper" itemprop="knowsAbout"
+                  >SQL Developer</label
+                >
+              </li>
+              <li>
+                <label for="eclipse" itemprop="knowsAbout">Eclipse/STS</label>
+              </li>
+            </ul>
+          </section> -->
+        </section>
+
+        <section>
+          <h2>Education</h2>
+          <ul class="no-bullets educert">
+            <li
+              itemprop="alumniOf"
+              itemscope
+              itemtype="http://schema.org/EducationalOrganization"
+            >
+              <span itemprop="award"
+                >Bachelor of Technology (Computer Science)</span
+              >
+              <span itemprop="name">Pondicherry University</span>
+
+              <span class="dates">
+                <time itemprop="startDate">June 2011</time>
+                -
+                <time itemprop="endDate">May 2015</time>
+              </span>
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Certifications</h2>
+          <ul class="no-bullets educert">
+            <!-- <li itemprop="alumniOf" itemscope itemtype="http://schema.org/EducationalOrganization">
             <span itemprop="name">Security Analyst</span>
             <ul>
               <li itemprop="award">Certified Security Analyst</li>
             </ul>
           </li> -->
-          <li itemprop="alumniOf" itemscope itemtype="http://schema.org/EducationalOrganization">
-            <span itemprop="name">SCRUM.ORG</span>
-            <ul>
-              <li itemprop="award">
-                <a rel="external author" href="https://www.scrum.org/certificates/748664P">Professional Scrum Master</a>
-              </li>
-            </ul>
-          </li>
-          <li itemprop="alumniOf" itemscope itemtype="http://schema.org/EducationalOrganization">
-            <span itemprop="name">Outsystems</span>
-            <ul>
-              <li itemprop="award">Associate Reactive Developer</li>
-            </ul>
-          </li>
-          <li itemprop="alumniOf" itemscope itemtype="http://schema.org/EducationalOrganization">
-            <span itemprop="name">Linkedin Learning</span>
-            <ul>
-              <li itemprop="award">Accessibility for Web Design</li>
-            </ul>
-          </li>
-        </ul>
-      </section>
+            <li
+              itemprop="alumniOf"
+              itemscope
+              itemtype="http://schema.org/EducationalOrganization"
+            >
+              <ul>
+                <li itemprop="award">
+                  <a
+                    rel="external author"
+                    href="https://www.scrum.org/certificates/748664P"
+                    >Professional Scrum Master</a
+                  >
+                </li>
+              </ul>
+              <span itemprop="name">scrum.org</span>
+            </li>
+            <li
+              itemprop="alumniOf"
+              itemscope
+              itemtype="http://schema.org/EducationalOrganization"
+            >
+              <ul>
+                <li itemprop="award">Associate Reactive Developer</li>
+              </ul>
+              <span itemprop="name">Outsystems</span>
+            </li>
+            <li
+              itemprop="alumniOf"
+              itemscope
+              itemtype="http://schema.org/EducationalOrganization"
+            >
+              <ul>
+                <li itemprop="award">Accessibility for Web Design</li>
+              </ul>
+              <span itemprop="name">Linkedin Learning</span>
+            </li>
+          </ul>
+        </section>
 
-      <section id='additional-links'>
-        <h2>Additional Links</h2>
-        <ul class="no-bullets educert ext-link-column-count">
-          <li>
-            <a rel="external author" href="https://stackoverflow.com/users/10319414/anand-kadhir">Stack Overflow ES</a>
-          </li>
-          <li>
-            <a rel="external author" href="https://github.com/douzo">Github Profile</a>
-          </li>
-          <li>
-            <a rel="external author" href="https://www.linkedin.com/in/kadhireshan-sivakozhundhu-08838018a/">LinkedIn
-              Profile</a>
-          </li>
-        </ul>
-      </section>
-    </div>
-  </main>
-</body>
-
+        <section id="additional-links">
+          <h2>Additional Links</h2>
+          <ul class="no-bullets educert ext-link-column-count">
+            <li>
+              <a
+                rel="external author"
+                href="https://stackoverflow.com/users/10319414/anand-kadhir"
+                >Stack Overflow ES</a
+              >
+            </li>
+            <li>
+              <a rel="external author" href="https://github.com/douzo"
+                >Github Profile</a
+              >
+            </li>
+            <li>
+              <a
+                rel="external author"
+                href="https://www.linkedin.com/in/kadhireshan-sivakozhundhu-08838018a/"
+                >LinkedIn Profile</a
+              >
+            </li>
+          </ul>
+        </section>
+      </div>
+    </main>
+  </body>
 </html>
